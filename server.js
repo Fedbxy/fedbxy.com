@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 // Get files in public directory
 app.use(express.static(path.join(__dirname, 'public'),{extensions: 'html'}));
 
-// Redirect to default page
+// Send the default page
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'public/home.html'));
 });
