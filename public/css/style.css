@@ -9,7 +9,6 @@
     position: absolute;
     bottom: 0%;
     left: 0%;
-    z-index: 1;
 }
 
 @media (max-width: 750px) {
@@ -17,7 +16,6 @@
         position: absolute;
         top: 0%;
         left: 0%;
-        z-index: 1;
     }
 }
 
