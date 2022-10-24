@@ -16,7 +16,7 @@ app.get('/GitHub',function(req,res){
     res.redirect('https://github.com/Fedbxy');
 });
 
-app.get('/114105099107114111108108',function(req,res){
+app.get('/114/105/099/107/114/111/108/108',function(req,res){
     res.redirect('https://www.youtube.com/watch?v=-AXetJvTfU0');
 });
 
