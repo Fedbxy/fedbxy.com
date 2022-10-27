@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_Day_03_0"></a>ข้อสอบเก่า Day 03</h1>
+<pre><code class="has-line-data" data-line-start="2" data-line-end="46" class="language-c++"><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    ios::sync_with_stdio(<span class="hljs-literal">false</span>);<span class="hljs-built_in">cin</span>.tie(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">int</span> n,m;<span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;
+    <span class="hljs-keyword">char</span> a[n][m];
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;m;j++){
+            <span class="hljs-built_in">cin</span>&gt;&gt;a[i][j];
+        }
+    }
+    <span class="hljs-keyword">int</span> y,x;<span class="hljs-built_in">cin</span>&gt;&gt;y&gt;&gt;x;
+    x-=<span class="hljs-number">1</span>;
+    y-=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">string</span> s;<span class="hljs-built_in">cin</span>&gt;&gt;s;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;s.size();i++){
+        <span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">'L'</span>){
+            <span class="hljs-keyword">if</span>(x!=<span class="hljs-number">0</span>){
+                x-=<span class="hljs-number">1</span>;
+                <span class="hljs-built_in">cout</span>&lt;&lt;a[y][x];
+            }
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">'R'</span>){
+            <span class="hljs-keyword">if</span>(x!=s.size()-<span class="hljs-number">1</span>){
+                x+=<span class="hljs-number">1</span>;
+                <span class="hljs-built_in">cout</span>&lt;&lt;a[y][x];
+            }
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">'U'</span>){
+            <span class="hljs-keyword">if</span>(y!=<span class="hljs-number">0</span>){
+                y-=<span class="hljs-number">1</span>;
+                <span class="hljs-built_in">cout</span>&lt;&lt;a[y][x];
+            }
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">'D'</span>){
+            <span class="hljs-keyword">if</span>(y!=s.size()-<span class="hljs-number">1</span>){
+                y+=<span class="hljs-number">1</span>;
+                <span class="hljs-built_in">cout</span>&lt;&lt;a[y][x];
+            }
+        }
+    }
+    <span class="hljs-built_in">cout</span>&lt;&lt;endl;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
